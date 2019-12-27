@@ -1,0 +1,10 @@
+<h1><%= @product.title %></h1>
+<p>vendor: <%= @product.vendor%></p>
+<p>product type: <%= @product.product_type %></p>
+<%= raw @product.body_html%>
+<% @product.images.each do |image| %>
+  <img src="<%=  image.src%>" alt="<%=@product.title%>">
+<% end %>
+<% @product.variants.each do |v|%>
+  <%= v.title %> - <%= v.price%>
+<% end %>
