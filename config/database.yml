@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool:     <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host:     localhost
+  database: shopify_test
+  username: postgres
+  password: 123
+
+development:
+  <<: *default
+  database: shopify_test_development
+
+test:
+  <<: *default
+  database: shopify_test_test
+
+production:
+  <<: *default
+  username: shopify_test
+  database: shopify_test_production
+  password: <%= ENV['SHOPIRY_TEST_DATABASE_PASSWORD'] %>
