@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 class HomeController < AuthenticatedController
-  # require HTTParty
-
   def index
     @products = ShopifyAPI::Product.find(:all, params: { limit: 10 })
     @webhooks = ShopifyAPI::Webhook.find(:all)
@@ -34,10 +32,6 @@ class HomeController < AuthenticatedController
         @image_array.push(image) #push the image into the images array
       end
     end
-
-  end
-
-  def edit
 
   end
 end
