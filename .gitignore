@@ -31,3 +31,4 @@ yarn-debug.log*
 .yarn-integrity
 localhost.crt
 localhost.key
+config/credentials.yml.enc
