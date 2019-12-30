@@ -2,9 +2,17 @@
 <p>vendor: <%= @product.vendor%></p>
 <p>product type: <%= @product.product_type %></p>
 <%= raw @product.body_html%>
-<% @product.images.each do |image| %>
-  <img src="<%=  image.src%>" alt="<%=@product.title%>">
+<%# @product.images.each do |image| %>
+<!--  <img src="<%#=  image.src%>" alt="<%#=@product.title%>">-->
+<%# end %>
+<% @image_array.each do |m| %>
+  <img src="<%= m.to_h[:src] %>" alt="<%= m.to_h[:alt] %>">
 <% end %>
 <% @product.variants.each do |v|%>
   <%= v.title %> - <%= v.price%>
 <% end %>
+<!--<ul>-->
+  <%# @image_metafields.each do |m|%>
+<!--    <li><%#= m %></li>-->
+  <%# end %>
+<!--</ul>-->
