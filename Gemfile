@@ -30,7 +30,7 @@ gem 'shopify_app', '~> 11.4'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
-gem 'httparty', '~> 0.17.3'
+gem 'httparty', '~> 0.21.0'
 
 group :development, :test do
   gem 'pry', '~> 0.12.2'
